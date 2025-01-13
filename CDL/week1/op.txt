@@ -1,0 +1,90 @@
+#include<stdio.h>
+#include<stdio.h>
+#include<stdlib.h>
+#include<stdlib.h>
+
+
+int main(int argc, char **argv) {
+int main(int argc, char **argv) {
+	if(argc <= 3) {
+	if(argc <= 2) {
+		printf("ERROR - Insufficient arguements passed to program\n");
+		printf("ERROR - Insufficient arguements passed to program\n");
+		return 0;
+		return 0;
+	}
+	}
+	FILE *fp1, *fp2, *fp3;
+	FILE *fp1, *fp2;
+	char c1 = 'a';
+	char c = '\0';
+	char c2 = 'a';
+	int curPos = 0;
+	int done1 = 0;
+
+	int done2 = 0;
+	fp1 = fopen(argv[1], "r+");
+
+	if(fp1 == NULL) {
+	fp1 = fopen(argv[1], "r+");
+		printf("ERROR - supplied file %s doesnt exist\n", argv[1]);
+	if(fp1 == NULL) {
+	}
+		printf("ERROR - supplied file %s doesnt exist\n", argv[1]);
+	fp2 = fopen(argv[2], "w+");
+	}
+
+	fp2 = fopen(argv[2], "r+");
+	fseek(fp1, 1, SEEK_END);	//go past EOF to avoid overflow in case of empty file
+	if(fp1 == NULL) {
+	curPos = ftell(fp1);		//use separate var to track current position to handle overflow once operation finishes
+		printf("ERROR - supplied file %s doesnt exist\n", argv[2]);
+	printf("File size: %d bytes\n", curPos - 1);
+	}
+	if(curPos == 1) {
+	fp3 = fopen(argv[3], "w+");
+		fclose(fp1);
+
+		fclose(fp2);
+	while(c1 != EOF || c2 != EOF) {
+		return 0;
+		if(c1 != EOF)
+	}
+			c1 = fgetc(fp1);
+	while(curPos >= 2) {
+		if(c2 != EOF)
+		fseek(fp1, -2, SEEK_CUR);	//since we start 2 pos after last char, if non-empty file
+			c2 = fgetc(fp2);
+		c = fgetc(fp1);
+		while(c1 != EOF && c1 != '\n') {
+		fputc(c, fp2);			//increments current pos by 1, hence we decrement by 2 above
+			fputc(c1, fp3);
+		curPos--;
+			c1 = fgetc(fp1);
+	}
+		}
+	fclose(fp1);
+		fputc('\n', fp3);
+	fclose(fp2);
+		while(c2 != EOF && c2 != '\n') {
+	return 0;
+			fputc(c2, fp3);
+}  
+			c2 = fgetc(fp2);
+
+		}
+
+		fputc('\n', fp3);
+
+	}
+
+	fclose(fp1);
+
+	fclose(fp2);
+
+	fclose(fp3);
+
+	return 0;
+
+}
+

@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment Home 1</title>
+</head>
+<body>
+    <u><h1>&lt;article&gt;</h1></u>
+    <article>
+        <header>
+            <h1>The Beauty of Nature</h1>
+            <p><strong>Author:</strong> John Doe</p>
+            <p><strong>Published:</strong> January 13, 2025</p>
+        </header>
+        <p>Nature is an integral part of our lives. 
+            It provides us with the air we breathe, the water we drink, and the beauty we admire. 
+            Exploring nature can help us find peace and tranquility amidst our busy lives.</p>
+        <footer>
+            <p>Tags: <em>Nature, Environment, Peace</em></p>
+        </footer>
+    </article>
+
+    <hr>
+    <u><h1>&lt;aside&gt;</h1></u>
+    <aside>
+        <h2>Quick Facts</h2>
+        <ul>
+            <li>Earth's average temperature has increased by 1.2°C since the late 19th century.</li>
+            <li>The last decade (2011–2020) was the hottest on record.</li>
+            <li>Melting ice caps contribute to rising sea levels.</li>
+        </ul>
+    </aside>
+
+    <hr>
+    <u><h1>&lt;audio&gt;</h1></u>
+    <audio src="sample.mp3" controls></audio>
+
+    <hr>
+    <u><h1>&lt;canvas&gt;</h1></u>
+    <canvas id="myCanvas" width="400" height="400"></canvas>
+    <script>
+        // Get the canvas element and its context
+        const canvas = document.getElementById('myCanvas');
+        const ctx = canvas.getContext('2d');
+        
+        ctx.fillStyle = 'blue';
+        ctx.fillRect(50, 50, 200, 100);
+        
+        ctx.beginPath();
+        ctx.arc(200, 250, 50, 0, 3.14 * 2); 
+        ctx.fillStyle = 'red';
+        ctx.fill();
+        ctx.stroke();
+    
+        ctx.fillStyle = 'black';
+        ctx.font = '20px Arial';
+        ctx.fillText('Hello, Canvas!', 120, 350);
+    </script>
+
+    <hr>
+    <u><h1>&lt;command&gt; (deprecated)</h1></u>
+    <command type="checklist" label="Check List">Check List</command>
+
+    <hr>
+    <u><h1>&lt;datalist&gt;</h1></u>
+    <input list="fruits" name="fruit" id="fruitInput">
+    <datalist id="fruits">
+        <option value="Apple">
+        <option value="Banana">
+        <option value="Cherry">
+        <option value="Date">
+        <option value="Elderberry">
+    </datalist>
+    
+    <hr>
+    <u><h1>&lt;details&gt;</h1></u>
+    <details>
+        <summary>What is HTML?</summary>
+        <p>HTML stands for Hypertext Markup Language. 
+            It is the standard language for creating web pages and web applications.</p>
+    </details>
+    
+    <hr>
+    <u><h1>&lt;embed&gt;</h1></u>
+    <embed src="sample.png">
+    
+    <hr>
+    <u><h1>&lt;figure&gt;</h1></u>
+    <figure>
+        <img src="sample.png">
+        <figcaption>This is a caption describing the sample image.</figcaption>
+    </figure>
+    
+    <hr>
+    <u><h1>&lt;footer&gt;</h1></u>
+    <footer>
+        <p>&copy; 2025 My Website. All rights reserved.</p>
+        <p>Contact us: <a href="mailto:info@mywebsite.com">info@mywebsite.com</a></p>
+        <p><a href="/privacy-policy">Privacy Policy</a> | 
+            <a href="/terms-of-service">Terms of Service</a>
+        </p>
+    </footer>
+    
+    <hr>
+    <u><h1>&lt;header&gt; + &lt;hgroup&gt; + &lg;nav&gt;</h1></u>
+    <header>
+        <hgroup>
+            <h1>My Website</h1>
+            <h2>Your gateway to information</h2>
+        </hgroup>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/about">About</a></li>
+                <li><a href="/services">Services</a></li>
+                <li><a href="/contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <hr>
+    <u><h1>&lt;keygen&gt; (deprecated)</h1></u>
+    <form action="/submit-key" method="post">
+        <label for="key">Generate Key:</label>
+        <keygen id="key" name="key" form="keyform" />
+        <input type="submit" value="Submit">
+    </form>
+    
+    <hr>
+    <u><h1>&lt;mark&gt;</h1></u>
+    <p>If you're searching for 
+        <mark>HTML</mark> tags, the <mark>mark</mark> 
+        tag is used for highlighting.
+    </p>
+    
+    <hr>
+    <u><h1>&lt;meter&gt;</h1></u>
+    <meter value="0.45" min="0" max="1" low="0.2" high="0.8" optimum="0.9">
+        45%
+    </meter>
+    
+    <hr>
+    <u><h1>&lt;output&gt;</h1></u>
+    <label>Quantity:</label>
+    <input type="number" id="quantity" value="1" oninput="calculateTotal()">
+    <p>Total Price: $
+        <output id="total" for="quantity">10</output>
+    </p>
+    <script>
+        function calculateTotal() {
+            var quantity = document.getElementById("quantity").value;
+            var price = 10; // price per item
+            var total = quantity * price;
+            document.getElementById("total").value = total;
+        }
+    </script>
+
+    <hr>
+    <u><h1>&lt;progress&gt;</h1></u>
+    <progress id="progressBar" value="20" max="100"></progress>
+
+    <hr>
+    <u><h1>&lt;ruby&gt;</h1></u>
+    <ruby>漢字<rp>(</rp><rt>kanji</rt><rp>)</rp></ruby>
+    
+    <hr>
+    <u><h1>&lt;section&gt;</h1></u>
+    <section>
+        <h2>My Projects</h2>
+        <p>Here are a few projects I've worked on:</p>
+        <ul>
+            <li>Endoscopy Camera Software</li>
+            <li>Optician Cocumentation Helper</li>
+        </ul>
+    </section>
+    
+    <hr>
+    <u><h1>&lt;time&gt;</h1></u>
+    <time datetime="2025-01-15"></time>January 15, 2025</time>
+    
+    <hr>
+    <u><h1>&lt;video&gt;</h1></u>
+    <video src="sample.webm" controls height="360" width="400"></video>
+    
+    <hr>
+    <u><h1>&lt;wbr&gt;</h1></u>
+    <p>
+        This is an example of a long word with a poten<wbr>tial break point.
+        The word can be broken between "poten" and "tial" if it needs to wrap.
+    </p>
+    
+</body>
+</html>
